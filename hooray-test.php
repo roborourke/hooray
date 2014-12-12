@@ -14,11 +14,14 @@ $a
 	} )
 	->map( function( $val ) {
 		return $val . ': lalala';
-	} );
+	} )
+	->shuffle();
 
 $b = clone $a;
+$c = clone $a;
 
 $b->unique()->filter();
 
 var_dump( $a->get() );
 var_dump( $b->get() );
+var_dump( $c->count() );
