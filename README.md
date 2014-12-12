@@ -30,6 +30,8 @@ Here's the equivalent to the above example using Hooray:
 ```php
 <?php
 
+// constructor takes the array you want to work on
+// if empty you can use push(), fill() etc.. methods
 $a = new hooray( array( 0, 1, 2, 3, 3, 4, 4, 6, 5 ) );
 
 $a
@@ -39,6 +41,7 @@ $a
 		return $val * 10;
 	} );
 
+// use the get() method to return the modified array
 print_r( $a->get() );
 
 ?>
