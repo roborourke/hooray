@@ -19,9 +19,14 @@ $a
 
 $b = clone $a;
 $c = clone $a;
+$d = clone $a;
 
 $b->unique()->filter();
 
 var_dump( $a->get() );
 var_dump( $b->get() );
 var_dump( $c->count() );
+
+$d->natsort();
+
+var_dump( $d->get() );
